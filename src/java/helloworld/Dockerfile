@@ -24,7 +24,7 @@ COPY --from=builder /app/target/helloWorld-*.jar /helloWorld.jar
 
 # Service must listen to $PORT environment variable.
 # This default value facilitates local development.
-ENV PORT 3333
+ENV PORT 8080
 
 # Run the web service on container startup.
 CMD ["java","-Dserver.port=${PORT}","-jar","/helloWorld.jar"]
